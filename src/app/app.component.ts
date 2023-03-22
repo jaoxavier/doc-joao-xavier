@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DocJoaoXavier';
+
+  change(){
+    if(window.localStorage.getItem('language')! == 'english'){
+      window.localStorage.setItem('language', 'portuguese')
+    }else{
+      window.localStorage.setItem('language', 'english')
+    }
+    window.location.reload()
+  }
 }
